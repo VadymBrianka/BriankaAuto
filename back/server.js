@@ -19,7 +19,9 @@ app.use(cors({
 
 // Підключення роутера
 app.use(router);
-
+app.get('/', function(req, res){
+    res.sendfile('front', '/index.html');
+});
 const startServer = async () => {
     try {
         await connectToDB();
