@@ -1,7 +1,7 @@
 {
-  "name": "briankaAuto",
+  "name": "BriankaAuto",
   "version": "2.0.0",
-  "description": "Cup Store with backend on Imports",
+  "description": "Car Store with backend on Imports",
   "main": "server.js",
   "type": "module",
   "engines": {
