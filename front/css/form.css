@@ -1,0 +1,63 @@
+.form-label{
+    width: 150px;
+    padding: 10px 0;
+    color: black;
+}
+
+.form-input {
+    width: 400px;
+}
+
+.td-align-center {
+    text-align: center;
+}
+
+.form-table {
+    margin: 0 auto;
+}
+
+.form-image-container{
+    text-align: center;
+    height: 152px;
+
+}
+
+.form-image {
+    height: 150px;
+}
+
+.form-email-eror {
+    margin: 0;
+    padding: 0;
+    height: 14px;
+    font-size: 0.8rem;
+    color: red;
+    text-align: center;
+    line-height: 0.8rem;
+}
+
+.form-select{
+    background-color: #F0ECE5;
+    text-align: center;
+}
+ .no-spinners::-webkit-outer-spin-button,
+ .no-spinners::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+ }
+
+ .form-control{
+    outline: none;
+    background-color: #F0ECE5;
+    border-radius: 0px;
+    
+}
+.form-control:focus{
+    background-color: #F0ECE5;
+    outline: none;
+    /* outline: 4px solid green; */
+    border-bottom: 1px solid black;
+}
+
+#commentLabel{
+    width: 100%;
+}

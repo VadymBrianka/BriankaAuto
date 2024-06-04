@@ -1,0 +1,75 @@
+.filter-container {
+    position: relative;
+    z-index: 5;
+    top: 60px;
+    width: 100%;
+}
+
+.filter-form{
+    position: relative;
+    min-height: 50px;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444366;
+    margin: 0;
+    padding: 4px 2px;
+}
+
+.filter-category{
+    flex: 1 1 auto;
+    margin: 1px 2px;
+    max-width: 100%;
+}
+
+.filter-search{
+    display: flex;
+    flex: 4 1 auto;
+    margin: 1px 2px;
+    max-width: 100%;
+    background-color: #F0ECE5;
+    position: relative;
+}
+
+.filter-sort{
+    flex: 1 1 auto;
+    margin: 1px 2px;
+    max-width: 100%;
+}
+
+
+.search-input {
+    padding-right: 30px;
+}
+
+.clear-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 16px;
+    display: block;
+}
+
+
+.search-input:not(:placeholder-shown) + .clear-button {
+    display: block; /* Показати хрестик, коли є введений текст */
+}

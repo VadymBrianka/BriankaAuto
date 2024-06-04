@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #161A30;
+    color: white;
+}
+
+.site-name{
+    cursor: pointer;
+}
+
+.content-container{
+    position: relative;
+    height: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn-container{
+    /* margin-right: 10px; */
+    position: relative;
+    /* top: 58px; */
+    z-index: 4;
+}
+
+.data-container {
+    position: relative;
+    top: 58px;
+    flex: 1 0 auto;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+}
+
+.empy-errors{
+    margin-top: 20px;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.empy-errors-item{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.btnToTop{
+    width: 30px;
+}
+/* /////////////////// */
+
+footer{
+    margin-top: 150px;
+    color: #F0ECE5;
+    background-color: #31304D;
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo{
+    color: #F0ECE5;    
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    bottom: 550px;
+}
+
+.footer-logo{
+    font-size: 40px;    
+    font-weight: bold;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid #B6BBC4;
+    border-bottom: 1px solid #B6BBC4;
+}
+
+.social{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.section-title{
+    width: 100%;
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+    padding: 5px 0px;
+    color: #F0ECE5;
+    background-color: #161A30;
+}
+
+.section-content{
+    color: #161A30;
+    background-color: #F0ECE5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    padding: 5px 0px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.social-media a img{
+    width: 40px;
+}
+
+.section{
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-1{
+    width: 30%;
+}
+.section-1 h1{
+    font-family: "Chakra Petch";
+    text-align: center;
+}
+.section-2{
+    width: 40%;
+    justify-content: center;
+    border-left: 1px solid #B6BBC4;
+    border-right: 1px solid #B6BBC4;
+}
+.section-3{
+    width: 40%;
+    justify-content: center;
+}
+
+.contact-title, .about-title{
+    font-size: 24px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.contact-content {
+    font-style: italic;
+}
+
+.contact-content table{
+    width: 100%;
+    padding: 5px;
+}
+
+.contact-content table td{
+    padding: 5px 0px;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.contact-content table td:first-of-type{
+    border-right: 1px solid black;
+}
+/* .contact-content table td:last-of-type{ */
+
+.about-content{
+    text-align: justify;
+    padding: 5px 10px;
+    text-indent: 20px;
+}
+
+.last{
+    background-color:rgb(28, 28, 28);
+    color: white;
+}
+@media all and (max-width: 890px){
+    .footer-info{
+        flex-direction: column;
+        width: 100%;
+        border: none;
+    }
+    .section-1{
+        width: 100%;
+    }
+    .section-2{
+        width: 100%;
+        border: none;
+    }
+    .section-3{
+        width: 100%;
+    }
+}
+/* /////////// */
+
