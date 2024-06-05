@@ -17,7 +17,7 @@ app.use(cors({
     credentials: true
   }));
 
-
+  app.use(express.static(path.join(__dirname, '../front')));
 // Підключення роутера
 app.use(router);
 
