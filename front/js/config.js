@@ -3,9 +3,9 @@ import { renderProductCategoriesOptions } from "./modals/productModal.js";
 ///
 /// ***** Ендпойнт бекенду та робота з localStorage *****
 ///
-// const backURL = `https://cups-store.onrender.com`;
+export const backURL = `https://briankaauto.onrender.com`;
 // Змінити backURL на `http://localhost:4000` при запуску на локальному сервері;
-export const backURL = `http://localhost:4000`;
+// export const backURL = `http://localhost:4000`;
 
 // Робота з localStorage
 
