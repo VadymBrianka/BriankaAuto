@@ -17,11 +17,11 @@ app.use(cors({
     credentials: true
   }));
 
+  app.use(express.static(path.join(__dirname, 'front')));
+
 // Підключення роутера
 app.use(router);
-app.get('/', function(req, res){
-    res.sendfile('../front' + '/index.html');
-});
+
 const startServer = async () => {
     try {
         await connectToDB();
