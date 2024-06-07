@@ -172,7 +172,7 @@ export const sendProductData = async () => {
 
 export const removeProduct = async (product) => {
     const msg = document.getElementsByClassName('confirmation-message')[0];
-    msg.innerHTML = `Are you sure you want to remove <b>${product.name}</b>`
+    msg.innerHTML = `Are you sure you want to remove <b>${product.brand} ${product.model}</b>`
     confirmModal.open();
     await waitForRemoveButtonPress();    // Зупинити виконання до натискання кнопки
         let deleteParams = JSON.stringify({_id:product._id, cloudinaryPublicId: product.cloudinaryPublicId})
