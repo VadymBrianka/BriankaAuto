@@ -1,7 +1,7 @@
 import { attachEventHandler, backURL, getUser } from "../config.js";
 import { renderOrders } from "./order.js";
 
-export const  orderCardRender = (order) => {
+export const orderCardRender = (order) => {
     // console.log(order);
     // Перетворюємо формат часу створення ордеру
     // у звичний для України вигляд
@@ -64,7 +64,7 @@ export const  orderCardRender = (order) => {
             status.style.color = '#e74c3c'; /* Червоний */
             break;
     }
-    
+
     // Рендеримо для адміністратора функціонал для зміни статусу замовлення
     const user = getUser();
     if (user.isAdmin) {
@@ -89,19 +89,19 @@ export const  orderCardRender = (order) => {
         // Сетимо статус замовлення у випадаючому списку
         document.getElementById(`order-status-select-${order._id}`).value = order.status;
     }
-    
+
     // Заповнюємо акордеон (деталі орера)
     // Вибираємо акордеон
     const orderDetails = document.getElementById(`${order._id}-cart`);
-    orderDetails.innerHTML =``;
+    orderDetails.innerHTML = ``;
     // Створюємо контейнер для відмальовування деталей замовлення
     const cartContainer = document.createElement('div');
     cartContainer.classList.add(`order-cart-container`);
     cartContainer.classList.add(`order-${order._id}`);
     orderDetails.appendChild(cartContainer);
-    
+
     // Рендер карточок товарів корзини замовлення
-    order.cart.forEach( (item) => orderCartItemRender(item, order));
+    order.cart.forEach((item) => orderCartItemRender(item, order));
 
     // Виведення загальної ціни корзини
     const totalCartPrice = document.createElement('div');
@@ -112,7 +112,7 @@ export const  orderCardRender = (order) => {
     totalCartPrice.innerHTML = `<div class="cart-order-price-label"> Order price:</div>
                                 <div class="cart-order-price-text"> ${orderPrice} $</div>`
     cartContainer.appendChild(totalCartPrice);
-  
+
 }
 
 function orderCartItemRender(item, order) {
@@ -134,8 +134,8 @@ function orderCartItemRender(item, order) {
                                 <div class="cart-product-mileage">${item.product.mileage} km.</div>
                                 <div class="cart-product-price">${item.product.price} $ / pc</div>
                             </div>
-
-                            <div class="cart-item-price">${item.count*item.product.price} $
+                            <div class="cart-item-count">${item.count} pcs</div>
+                            <div class="cart-item-price">${item.count * item.product.price} $
                             </div>`;
     cartContainer.appendChild(cartItem);
 }
@@ -151,16 +151,16 @@ async function orderStatusChange(id) {
                 mode: 'cors',
                 credentials: 'include',
                 headers: {
-                    'Content-Type': 'application/json',   
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(reqBody)
             })
-            .then(response => response.json())    // Парсимо [object Response] 
-            .then(msg => {                        // Парсимо [object Promise]
-                console.log(msg);
-                renderOrders();
-                resolve();
-            })                                         
+                .then(response => response.json())    // Парсимо [object Response] 
+                .then(msg => {                        // Парсимо [object Promise]
+                    console.log(msg);
+                    renderOrders();
+                    resolve();
+                })
         } catch (error) {
             console.error(error);
             reject(error);

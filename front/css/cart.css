@@ -119,6 +119,16 @@
     
 }
 
+.cart-item-count {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+
 .cart-order-price{
     width: inherit;
     display: flex;
