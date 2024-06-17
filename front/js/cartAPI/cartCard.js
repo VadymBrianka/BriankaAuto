@@ -35,7 +35,7 @@ export const cartCardRender = (item, index) => {
     cartContainer.appendChild(cartCard);
     // Навішуємо обробники
     attachEventHandler(`removeCartItem${item.product._id}`, 'click', () => { removeCartItem(item, index) });
-    attachEventHandler(`decreaseCartItemCount${item.product._id}`, 'click', () => { decreaseCartItemCount(item, index) });
+    attachEventHandler(`decreaseCartItemCount${item.product._id}`, 'click', () => {     (item, index) });
     attachEventHandler(`increaseCartItemCount${item.product._id}`, 'click', () => { increaseCartItemCount(index) });
 }
 
@@ -43,7 +43,7 @@ const removeCartItem = async (item, index) => {
     return new Promise(async (resolve, reject) => {
         try {
             const msg = document.getElementsByClassName('confirmation-message')[0];
-            msg.innerHTML = `Are you sure you want to remove product <b>${item.product.name}</b> from the cart? </br>`
+            msg.innerHTML = `Are you sure you want to remove product <b>${item.product.brand} ${item.product.model}</b> from the cart? </br>`
             confirmModal.open();
             await waitForRemoveButtonPress();
             confirmModal.close();
